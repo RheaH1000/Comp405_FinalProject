@@ -111,14 +111,14 @@
 			font-size: 18px;
 			border: none;
 			outline: none;
-			background-color: #0066ff;
+			background-color: #005ff0;
 			color: white;
 			cursor: pointer;
 			padding: 15px;
 			border-radius: 4px;
 		}
 		#myBtn:hover {
-			background-color: #2b7efc;
+			background-color: #156bed;
 		}
 
 
@@ -143,7 +143,7 @@
 	        <a href="page1.html">Filipino Mythical Creatures</a> |
 	        <a href="page2.html">American Mythical Creatures</a> |
 	        <a href="page3.html">Turkic Mythical Creatures</a> |
-		    <a href="exploremore.html">Explore More</a>
+		    <a href="exploremore.html">Explore</a>
     	</nav>
     </div>
 
@@ -243,7 +243,11 @@
 		    <a href="https://mfr.fandom.com/wiki/Siyokoy">Siyokoy - mfr.fandom.com</a>
 		    <br>
 
-		    <!-- Scroll Up Button -->
+		    <img class="Cutegif" src="imgs/Source2.gif" alt="Gif of cute mythical creature">
+		</div>  
+	</div>
+
+	<div class="Scroll Up Button">
 		    <button onclick="topFunction()" id="myBtn" title="Click to back to the top">Back to top</button>
 
 		    <!-- Program to get and function button -->
@@ -255,11 +259,11 @@
 			window.onscroll = function() {scrollFunction()};
 
 			function scrollFunction() {
-			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 			    mybutton.style.display = "block";
-			  } else {
+				} else {
 			    mybutton.style.display = "none";
-			  }
+				}
 			}
 
 			// When the user clicks on the button, scroll to the top of the document
@@ -268,9 +272,6 @@
 			  document.documentElement.scrollTop = 0;
 			}
 			</script>
-
-		    <img class="Cutegif" src="imgs/Source2.gif" alt="Gif of cute mythical creature">
-		</div>  
 	</div>
 
     <!-- Contact Me -->
