@@ -32,10 +32,67 @@
 	    	padding-bottom: 3%;
 	    }
 
-	    .NavigationBar {
-	    	font-size: 24px;
-	    	padding-top: 1%;
-	    }
+		/* NavigationBar container */
+		.NavigationBar {
+		  overflow: hidden;
+		  background-color: #4eaaed;
+		  padding: 10px;
+		}
+		/* Links inside NavigationBar */
+		.NavigationBar a {
+			float: center;
+			font-size: 20px;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		/* The dropdown container */
+		.dropdown {
+		  float: center;
+		  overflow: hidden;
+		}
+		/* Dropdown button */
+		.dropdown .dropbtn {
+		  font-size: 20px;
+		  border: none;
+		  outline: none;
+		  color: white;
+		  padding: 14px 16px;
+		  background-color: inherit;
+		  font-family: inherit; /* Important for vertical align on mobile phones */
+		  margin: 0; /* Important for vertical align on mobile phones */
+		}
+		/* Add red background color to NavigationBar links on hover */
+		.NavigationBar a:hover, .dropdown:hover .dropbtn {
+		  background-color: #ff2617;
+		}
+		/* Dropdown content */
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+		/* Links inside dropdown */
+		.dropdown-content a {
+		  float: none;
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: left;
+		}
+		/* Add grey background color to dropdown links on hover */
+		.dropdown-content a:hover {
+		  background-color: #ddd;
+		}
+		/* Show  dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
 
 	    .MainContent {
 	    	color: white;
@@ -101,16 +158,21 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <div class="NavigationBar">
-    	<nav>
-	        <a href="index.html">Home Page</a> |
-	        <a href="page1.html">Filipino Mythical Creatures</a> |
-	        <a href="page2.html">American Mythical Creatures</a> |
-	        <a href="page3.html">Turkic Mythical Creatures</a> |
-		    <a href="exploremore.html">Explore More</a>
-    	</nav>
-    </div>
+	 <!-- Navigation Bar -->
+	<div class="NavigationBar">
+		<a href="index.html">Home</a>
+		<div class="dropdown">
+	  		<button class="dropbtn">Explore
+	      	<i class="fa fa-caret-down"></i>
+	    	</button>
+		    <div class="dropdown-content">
+		    	<a href="page1.html">Filipino Mythical Creatures</a>
+		    	<a href="page2.html">American Mythical Creatures</a>
+		    	<a href="page3.html">Turkic Mythical Creatures</a>
+		    	<a href="exploremore.html">Explore More</a>
+		    </div>
+	  	</div>
+	</div>
 
     <!-- Introduction -->
     <div class="Introduction">
