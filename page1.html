@@ -26,7 +26,14 @@
 	    	text-align: center;
 	    	font-size: 18px;
 	    	color: orange;
-	    	padding: 205px;
+	    	padding: 3% 100px 3% 100px;
+	    }
+	    /* when hover, background image darkens */
+	    .Introduction:hover {
+	    	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(imgs/FilipinoMythsP1.jpg);
+	    	background-size: cover;
+	    	text-align: center;
+	    	padding: 3% 100px 3% 100px;
 	    }
 
 		/* NavigationBar container */
@@ -127,9 +134,16 @@
 	    /* Specific Styles (for more individual items) */
 
 	    .Itext {
+	    	margin-top: 20%;
 	    	background: rgba(0,0,0,0.7);
 	    	font-size: 20px;
 	    	padding: 20px;
+	    	transition: transform 450ms;
+	    }
+	    /* when hover, Introduction Text container moves up */
+	    .Itext:hover {
+	    	transition: transform 500ms;
+    		transform: translateY(-120px);
 	    }
 
 	    .cardSources {
