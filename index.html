@@ -3,6 +3,8 @@
 <head>
 	<title>Mythicals in Countries: Home Page</title>
 	<meta charset="UTF-8">
+	<!-- Prevent smartphones from scaling pages down -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 	<style>
 
@@ -10,15 +12,12 @@
 		    font-family: sans-serif;
 		    background-color: #ffeecc;
 		    text-align: center;
-
-		    /* Layout Styles */
 		    display: flex;
 		    flex-flow: row wrap;
 		    justify-content: center;
 		    margin: auto;
 	    }
 
-	    /* Main Divs */
 	    .Introduction {
 	    	background: url(imgs/IMythWH.jpg);
 	    	background-size: cover;
@@ -39,9 +38,9 @@
 		.NavigationBar {
 			overflow: hidden;
 			background-color: #4eaaed;
-			padding: 10px 576px 10px 576px;
+			padding: 20px 576px 20px 576px;
 			display: flex;
-			justify-content: center;
+			justify-content: space-around;
 		}
 		/* Links inside NavigationBar */
 		.NavigationBar a {
@@ -71,7 +70,7 @@
 		}
 		/* Add red background color to NavigationBar links on hover */
 		.NavigationBar a:hover, .dropdown:hover .dropbtn {
-			background-color: #ff2617;
+			color: #ff2617;
 		}
 		/* Dropdown content */
 		.dropdown-content {
@@ -127,11 +126,9 @@
 
 	    .Contact {
 	    	font-size: 24px;
-	    	padding-bottom: 2%;
+	    	padding: 20px;
 	    	text-align: center;
-	    	display: flex;
-	    	flex-flow: column wrap;
-	    	justify-content: center;
+	    	display: block;
 	    }
 
 	    /* Specific Styles (for more individual items) */
@@ -187,108 +184,181 @@
 		}
 
 	    .Email, .Instagram {
-	    	padding-left: 43%;
-	    	text-align: left; 
+	    	display: inline-flex;
+	    	margin: auto;
+	    	text-align: center;
 	    }
+
+	    /* RWD Code */
+		@media only screen and (max-width: 600px) {
+  			.content {
+    			background-color: #ffeecc;
+    			display: inline-block;
+    			margin: center;
+  			}
+
+  			/* NavigationBar */
+  			.NavigationBar {
+				display: block;
+				flex-direction: column;
+  			}
+  			
+  			.NavigationBar a {
+    			font-size: 25px;
+    			color: #404040;				
+  			}
+
+  			.Home, .dropdown .dropbtn  {
+  				background-color: lightgrey;
+  				color: #404040;
+  				border-radius: 5%;
+  				font-size: 25px;
+  				margin: 25px;
+  			}
+
+  			.dropdown-content a {
+     			display: block;
+    			font-size: 20px; 
+  			}
+
+  			/*Introduction */
+  			.Introduction {
+  				margin: auto;
+  				width: 50%;
+  			}
+
+  			/* MainContent */
+  			.MainContent {
+				display: inline-block;
+				flex-direction: column;
+  			}
+
+  			.card {
+  				margin: 50px;
+  			}
+
+  			.ContentPicsW {
+  				width: 50%;
+  			}
+
+  			/* Contact */
+			.Contact {
+				display: inline-flex;
+				flex-direction: column;
+				width: 30%;
+			}
+			.Email, .Instagram {
+				display: flex;
+				margin: left;
+			}
+  		}
+
+  		@media only screen and (min-width: 601px) {
+  			body {
+				background-color: pink;
+			}
+  		}
 
 	</style>
 </head>
 <body>
-	
-	<!-- Navigation Bar -->
-	<div class="NavigationBar">
-		<a href="index.html">Home</a>
-		<!-- Dropdown Button -->
-		<div class="dropdown">
-	  		<button class="dropbtn">Explore
-	      	<i class="fa fa-caret-down"></i>
-	    	</button>
-		    <div class="dropdown-content">
-		    	<a href="page1.html">Filipino Mythical Creatures</a>
-		    	<a href="page2.html">American Mythical Creatures</a>
-		    	<a href="page3.html">Turkic Mythical Creatures</a>
-		    	<a href="exploremore.html">Explore More</a>
-		    </div>
-	  	</div>
-	</div>
 
-    <!-- Introduction -->
-    <div class="Introduction">
-    	<div class="Itext">
-	    	<h1>Welcome to My World of Mythical Creatures!</h1>
-		    <p>Growing up, I've always loved mythologies, from Greek mythology to Ancient Chinese mythology. I also love animals! So what better way to combine the two than compiling interesting and cool mythical creatures from all sorts of mythologies world wide! In addition, this website allows me to shine light onto lesser known mythologies around the world! Unfortunately, I limited each webpage to seven creatures for the sake of my sanity; hopefully I get to add in more in the future. May this website both inform and fascinate you with the intriguing creatures mythologies around the world have tucked away in history! I hope you enjoy!</p>
-    	</div>
-    </div>
+	<div class="content">
+		<!-- Navigation Bar -->
+		<div class="NavigationBar">
+			<a class="Home" href="index.html">Home</a>
+			<!-- Dropdown Button -->
+			<div class="dropdown">
+		  		<button class="dropbtn">Explore
+		      	<i class="fa fa-caret-down"></i>
+		    	</button>
+			    <div class="dropdown-content">
+			    	<a href="page1.html">Filipino Mythical Creatures</a>
+			    	<a href="page2.html">American Mythical Creatures</a>
+			    	<a href="page3.html">Turkic Mythical Creatures</a>
+			    	<a href="exploremore.html">Explore More</a>
+			    </div>
+		  	</div>
+		</div>
 
-    <!-- Main Content: Pictures and Information -->
-    <div class="MainContent">
-    	<div class="card">
-    		<h3>America</h3>
-	        <br>
-	        <p>American mythology is not as grand and majestic as the well-known classics such as Greek mythology. However, every mythology derived from collections of folklore stories, and American mythology is no exception. Each region and/or state of the United States has their own little collection of folklores and legends, some deriving as early as the 1700s colonists settled when the ago but plenty of them are from more recent times. To note, while some are influenced by Native American tradition, these folklores are not exactly from the actual tribal reliefs of the community native people. Rather, American folklore consists of tall tales, popular beliefs, local legends and myths, oral-told stories, etc.
-	        </p>
-	        <br>
-	        <img class="ContentPicsA" src="imgs/americanflagIH.gif" alt="Image of the American flag">
-	        <p>Source:</p>
-	        <a href="https://en.wikipedia.org/wiki/Folklore_of_the_United_States">Wikipedia</a>
-    	</div>
+	    <!-- Introduction -->
+	    <div class="Introduction">
+	    	<div class="Itext">
+		    	<h1>Welcome to My World of Mythical Creatures!</h1>
+			    <p>Growing up, I've always loved mythologies, from Greek mythology to Ancient Chinese mythology. I also love animals! So what better way to combine the two than compiling interesting and cool mythical creatures from all sorts of mythologies world wide! In addition, this website allows me to shine light onto lesser known mythologies around the world! Unfortunately, I limited each webpage to seven creatures for the sake of my sanity; hopefully I get to add in more in the future. May this website both inform and fascinate you with the intriguing creatures mythologies around the world have tucked away in history! I hope you enjoy!</p>
+	    	</div>
+	    </div>
 
-    	<div class="card">
-    		<h3>The Philippines</h3>
-	        <br>
-	        <p>I personally chose this country's mythology to research because I am fond of my filipino heritage. In addition, I am intrigued at some of the Philippines' mythical creatures. Many stories and legends that they come from are from the indigenous Filipino folk religions, many of its ethical faiths influencing one another. Many of its folklore is also influenced by Indonesian and Malay myths as well as Muslim, Hindu, Shinto, Bhuddist, and Christian faiths. Like Greek mythology, these stories are meant to explan the natural world. Such stories are passed down through oral tradition and preserved through community shamans, community elders, and other spiritual leaders. Historically, the term for mythologies and indigenous religions have been referred to as Anitism, meaning "ancestral religion".
-	        </p>
-	        <br>
-	        <img class="ContentPicsP" src="imgs/filipinoflagIH.gif" alt="Image of the Filipino flag">
-	        <p>Source:</p>
-	        <a href="https://en.wikipedia.org/wiki/Philippine_mythology">Wikipedia</a>
-    	</div>
+	    <!-- Main Content: Pictures and Information -->
+	    <div class="MainContent">
+	    	<div class="card">
+	    		<h3>America</h3>
+		        <br>
+		        <p>American mythology is not as grand and majestic as the well-known classics such as Greek mythology. However, every mythology derived from collections of folklore stories, and American mythology is no exception. Each region and/or state of the United States has their own little collection of folklores and legends, some deriving as early as the 1700s colonists settled when the ago but plenty of them are from more recent times. To note, while some are influenced by Native American tradition, these folklores are not exactly from the actual tribal reliefs of the community native people. Rather, American folklore consists of tall tales, popular beliefs, local legends and myths, oral-told stories, etc.
+		        </p>
+		        <br>
+		        <img class="ContentPicsA" src="imgs/americanflagIH.gif" alt="Image of the American flag">
+		        <p>Source:</p>
+		        <a href="https://en.wikipedia.org/wiki/Folklore_of_the_United_States">Wikipedia</a>
+	    	</div>
 
-    	<div class="cardW">
-    		<img class="ContentPicsW" src="imgs/WorldMythsH.jpg" alt="Image of mythologies worldwide">
-    		<p><cite>Around the World</cite> by World</p>
-    	</div>
-    </div>
+	    	<div class="card">
+	    		<h3>The Philippines</h3>
+		        <br>
+		        <p>I personally chose this country's mythology to research because I am fond of my filipino heritage. In addition, I am intrigued at some of the Philippines' mythical creatures. Many stories and legends that they come from are from the indigenous Filipino folk religions, many of its ethical faiths influencing one another. Many of its folklore is also influenced by Indonesian and Malay myths as well as Muslim, Hindu, Shinto, Bhuddist, and Christian faiths. Like Greek mythology, these stories are meant to explan the natural world. Such stories are passed down through oral tradition and preserved through community shamans, community elders, and other spiritual leaders. Historically, the term for mythologies and indigenous religions have been referred to as Anitism, meaning "ancestral religion".
+		        </p>
+		        <br>
+		        <img class="ContentPicsP" src="imgs/filipinoflagIH.gif" alt="Image of the Filipino flag">
+		        <p>Source:</p>
+		        <a href="https://en.wikipedia.org/wiki/Philippine_mythology">Wikipedia</a>
+	    	</div>
 
-    <!-- Scroll Up Button -->
-	<div class="Scroll Up Button">
-	    <button onclick="topFunction()" id="myBtn" title="Click to back to the top">Back to top</button>
+	    	<div class="cardW">
+	    		<img class="ContentPicsW" src="imgs/WorldMythsH.jpg" alt="Image of mythologies worldwide">
+	    		<p><cite>Around the World</cite> by World</p>
+	    	</div>
+	    </div>
 
-	    <!-- Program to get and function button -->
-		<script>
-		//Get the button
-		var mybutton = document.getElementById("myBtn");
+	    <!-- Scroll Up Button -->
+		<div class="Scroll Up Button">
+		    <button onclick="topFunction()" id="myBtn" title="Click to back to the top">Back to top</button>
 
-		// When the user scrolls down 20px from the top of the document, show the button
-		window.onscroll = function() {scrollFunction()};
+		    <!-- Program to get and function button -->
+			<script>
+			//Get the button
+			var mybutton = document.getElementById("myBtn");
 
-		function scrollFunction() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		    mybutton.style.display = "block";
-			} else {
-		    mybutton.style.display = "none";
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			    mybutton.style.display = "block";
+				} else {
+			    mybutton.style.display = "none";
+				}
 			}
-		}
 
-		// When the user clicks on the button, scroll to the top of the document
-		function topFunction() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-		</script>
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+			</script>
+		</div>
+
+	    <!-- Contact Me -->
+	    <div class="Contact">
+		    <h5>If you have any questions, contact me via email or instagram:</h5>
+		    <div class="Email">
+			    <i class="far fa-envelope fa-2x"></i>
+			    <a href="mailto:rqh1000@wildcats.unh.edu">Email</a>	    	
+		    </div>
+		    <div class="Instagram">
+		    	<i class="fab fa-instagram fa-2x"></i>
+			    <a href="https://www.instagram.com/rqh0w0/" class="fa fa-instagram">Instagram</a>	    	
+		    </div>
+	    </div>	
 	</div>
-
-    <!-- Contact Me -->
-    <div class="Contact">
-	    <h5>If you have any questions, contact me via email or instagram:</h5>
-	    <div class="Email">
-		    <i class="far fa-envelope fa-2x"></i>
-		    <a href="mailto:rqh1000@wildcats.unh.edu">Email</a>	    	
-	    </div>
-	    <div class="Instagram">
-		    <i class="fab fa-instagram fa-2x"></i>
-		    <a href="https://www.instagram.com/rqh0w0/" class="fa fa-instagram">Instagram</a>	    	
-	    </div>
-    </div>
 </body>
 </html>
